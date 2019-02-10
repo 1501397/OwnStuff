@@ -9,7 +9,10 @@ u_input = input()
 
 while u_input != "0":
 
-    
+    if u_input not in ("1", "2", "3", "4", "5", "6", "7", "0"):
+        print ("invalid input")
+        u_input = input()
+        continue
 
     if u_input == "1":
         print("rolled a: [", random.randrange(1, 5), "] on a d4")
@@ -38,8 +41,6 @@ while u_input != "0":
     if u_input == "7":
         print("rolled a: [", random.randrange(1, 101), "] on a d100")
         u_input = input()
-    elif u_input >= "8" or u_input <= "-1":
-        print ("---invalid input---")
-        u_input = input()
+
     
 
